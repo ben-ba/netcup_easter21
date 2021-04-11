@@ -121,7 +121,7 @@ def scan():
       response_json = json.loads(response)
       if response_json["eggs"] != False:
         if int(response_json["eggs"][0]["product_id"]) in ids:
-            eggs.append([html.unescape(response_json["eggs"][0]["title"]),"https://www.netcup.de/bestellen/produkt.php?produkt=" + str(response_json["eggs"][0]["product_id"]) + "&hiddenkey="+ str(response_json["eggs"][0]["product_key"])],"https://netcup.de" + u)
+            eggs.append([html.unescape(response_json["eggs"][0]["title"]),"https://www.netcup.de/bestellen/produkt.php?produkt=" + str(response_json["eggs"][0]["product_id"]) + "&hiddenkey="+ str(response_json["eggs"][0]["product_key"]),"https://netcup.de" + u])
         print("Gefunden auf:", "https://netcup.de" + u)
         print(html.unescape(response_json["eggs"][0]["title"]), "( Produkt ", str(response_json["eggs"][0]["product_id"]) ,") für", html.unescape(response_json["eggs"][0]["price"]))
         #Geht nur lokal:
